@@ -8,9 +8,9 @@ C     https://www.ibiblio.org/pub/languages/fortran/ch1-8.html#10
       DO 10 I = 1, 5
           J(I) = 2
    10 CONTINUE
-      WRITE (*, FMT=*) 'BEFORE: ', J
+      PRINT *, 'BEFORE: ', J
       CALL SUB(J, J(1))
-      WRITE (*, FMT=*) 'AFTER:  ', J
+      PRINT *, 'AFTER:  ', J
       END
 
       SUBROUTINE SUB(K, L)

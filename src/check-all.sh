@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-icode-f77-wrapper.py $1
+icode-f77-wrapper.py "$@"
 echo "================================================================================"
 
-ftnchek -declare -f77 -portability -sixchar -style=block-if,distinct-do,do-construct,goto,program-stmt $1
+ftnchek -declare -f77 -portability -sixchar -style=block-if,distinct-do,do-construct,goto,program-stmt "$@"
 echo "================================================================================"
 
 floppy -c2,3,4,5,6,9,10,12,16,17,18,19,20,23,25,26,27,28,29,30,31,32,34,35,36,37,39,41,42,44,46 $1

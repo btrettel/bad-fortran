@@ -7,3 +7,8 @@ Many of these test cases come from elsewhere. Credit is given in the file header
 Some guidelines:
 
 - If different compilers may display different behavior, make which behavior is present visible in the output.
+
+## Categories
+
+- ALS: aliasing
+- CNV: type conversion
