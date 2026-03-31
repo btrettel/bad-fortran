@@ -6,9 +6,35 @@ Many of these test cases come from elsewhere. Credit is given in the file header
 
 Some guidelines:
 
+- Modify each test case to make the code style more uniform and reduce the number of warnings/errors for each file to only the intended warnings/errors. For example, all variables should be explicitly declared.
 - If different compilers may display different behavior, make which behavior is present visible in the output.
 
 ## Categories
 
 - ALS: aliasing
+- BND: array index bounds
 - CNV: type conversion
+    - TODO: `COMPLEX` to `REAL` by `EQUIVALENCE`
+    - TODO: `COMPLEX` to `REAL` by argument passing
+        - <https://groups.google.com/g/comp.lang.fortran/c/g5nh0n2IsO8/m/CKAXU6mYBQAJ>
+- COM: `COMMON` blocks
+- CFL: conflicting names
+- CFU: confusing code
+    - Compound relational expressions like IF (X .OR. (.NOT. Y)) ...
+    - Use of continuation characters which could be confusing
+    - Use of homoglyphs
+    - Use of precedence in any kind of expression
+- DO: `DO` loops
+- FMT: formatting
+- GOT: `GO TO`
+- IO: input/output
+- MTH: math (division by zero, overflow, underflow, etc. for both `REAL`s and `INTEGER`s)
+- OB: obsolescent features
+- LEN: length restrictions placed by the FORTRAN 77 standard
+    - Lines more than 72 characters long
+    - Variable name more than 6 characters long
+- STY: coding style
+- UIN: uninitialized variables
+- UUS: unused code
+    - Unreachable/dead code
+    - Unused label
