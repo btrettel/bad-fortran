@@ -10,6 +10,6 @@ C     https://www.fortran.uk/diagnose.zip case alias1.f90
       END
       SUBROUTINE SUB(X, Y)
       REAL X, Y
-      X = 2.
-      Y = 3.
+      X = 2.0
+      Y = 3.0
       END
