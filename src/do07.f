@@ -1,4 +1,4 @@
-C     DO loop index used after DO loop ends
+C     DO loop variable used after DO loop ends
       PROGRAM DO07
       INTEGER I, J
       J = 0

@@ -1,4 +1,4 @@
-# Bad Fortran
+# Fortran static analysis and compiler diagnostic tests
 
 This is a repository of Fortran code with known bugs, undefined behavior, unspecified behavior, and bad practices. For the moment, my focus is on FORTRAN 77 as my motivation in making this repository is to help figure out what is detected and not detected by various compilers and static analyzers to help when modernizing code. This also helps keep the scope more manageable to start. Later, I might add examples from Fortran 90 and later. To detect false positives, known good code might be added later as well.
 
@@ -19,15 +19,20 @@ Some guidelines:
         - <https://groups.google.com/g/comp.lang.fortran/c/g5nh0n2IsO8/m/CKAXU6mYBQAJ>
 - COM: `COMMON` blocks
 - CFL: conflicting names
+    - Program-unit name used as `DO` loop index
 - CFU: confusing code
     - Compound relational expressions like IF (X .OR. (.NOT. Y)) ...
     - Use of continuation characters which could be confusing
     - Use of homoglyphs
     - Use of precedence in any kind of expression
 - DO: `DO` loops
-- FMT: formatting
+    - `DO` loop variables (index, bounds, increment) in `COMMON`
 - GOT: `GO TO`
 - IO: input/output
+    - Explicit UNIT numbers in I/O
+    - Pre-connected I/O units
+    - formatting
+- MIS: miscellaneous
 - MTH: math (division by zero, overflow, underflow, etc. for both `REAL`s and `INTEGER`s)
 - OB: obsolescent features
 - LEN: length restrictions placed by the FORTRAN 77 standard

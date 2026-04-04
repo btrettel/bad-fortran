@@ -1,4 +1,4 @@
-C     Assignment to DO loop terminal parameter
+C     Assignment to DO loop upper bound
       PROGRAM DO05
       INTEGER I, J, K, L
       J = 1

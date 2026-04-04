@@ -1,4 +1,4 @@
-C     Aliased dummy argument variable
+C     Argument mismatch, same file
 C     Modified from:
 C     https://www.fortran.uk/diagnose.zip case arg1.f90
       PROGRAM ARG01

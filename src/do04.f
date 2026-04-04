@@ -1,4 +1,4 @@
-C     Assignment to DO loop initial parameter
+C     Assignment to DO loop lower bound
       PROGRAM DO04
       INTEGER I, J, K, L
       J = 1
