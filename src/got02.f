@@ -5,7 +5,7 @@ C     GOTO to end of DO loop from inside
       K = 0
       DO 10 I = 1, 10
           J = J + I**2
-          IF (J < 10) GOTO 10
+          IF (J .LT. 10) GOTO 10
           K = J + I
           PRINT *, I
    10 CONTINUE

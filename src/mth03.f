@@ -7,7 +7,7 @@ C     https://www.fortran.uk/diagnose.zip case ufl.f90
       INTRINSIC SQRT
       X = SQRT(3.0)
       DO 10 I = 1, 25
-          IF (X.LT.1E-20) THEN
+          IF (X .LT. 1.E-20) THEN
               X = 0.0
           ELSE
               X = 0.001*X

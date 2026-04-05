@@ -7,14 +7,14 @@ C Check for false positive
       INTEGER I, J
       CHARACTER X(11)*1
       EXTERNAL SUB
-      INTRINSIC CHAR, MOD
-      X(1) = CHAR(0)
+      INTRINSIC ACHAR, MOD
+      X(1) = ACHAR(0)
       PRINT *, 'CHECKING FOR FALSE POSITIVE.'
       PRINT *, 'NO ERROR SHOULD BE REPORTED BEFORE NEXT MESSAGE.'
       DO 10 I = 1, 255
 C        PRINT *,I
           J = MOD(I, 10) + 1
-          X(J) = CHAR(I)
+          X(J) = ACHAR(I)
           X(1) = X(J)
    10 CONTINUE
       PRINT *, 'BUT NOW THERE IS A GENUINE UNDEFINED VAR USAGE.'
