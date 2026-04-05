@@ -39,6 +39,7 @@ Some guidelines:
         - Could detect with a FORTRAN 77 compiler.
         - whole array operations (assignment, otherwise)
             - <https://community.intel.com/t5/Intel-Fortran-Compiler/bad-code-but-no-warning/m-p/1590495#M171852>
+        - array constructor
     - Legal in FORTRAN 77, illegal later (ignoring obsolescent and deleted features)
         - https://groups.google.com/g/comp.lang.fortran/c/K1lWEC_J6h8/m/mrxZJ50ACwAJ
             - > By the way, we have seen standard-conforming FORTRAN 77 which will not compile under Fortran 90 and later, though these are very rare. Before someone asks, for example:
