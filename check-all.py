@@ -5,7 +5,8 @@ import copy
 import os
 import subprocess
 
-STATIC_CHECKERS = {"icode", "ftnchek", "floppy", "toolpack"}
+#STATIC_CHECKERS = {"icode", "ftnchek", "floppy", "toolpack", "flang", "gfortran", "ifx", "lf95"}
+STATIC_CHECKERS = {"flang"}
 SOURCE_DIR      = "src"
 OUTPUT_DIR      = "out"
 
@@ -19,6 +20,14 @@ for static_checker in STATIC_CHECKERS:
             cmd = ["floppy", "-c2,3,4,5,6,9,10,12,16,17,18,19,20,23,25,26", "-c27,28,29,30,31,32,34,35,36,37,39,41,42,44,46"]
         case "toolpack":
             cmd = ["pfort"]
+        case "flang":
+            cmd = ["flang-new-19", "-fsyntax-only", "-pedantic", "-std=f2018"]
+        case "gfortran":
+            cmd = ["gfortran", "-fsyntax-only", "-Wall", "-Wextra", "-pedantic-errors", "-Wno-do-subscript", "-std=f95", "-Wconversion", "-Wconversion-extra", "-Wunused", "-Wcharacter-truncation", "-Winteger-division"]
+        case "ifx":
+            cmd = ["ifx", "-syntax-only", "-warn", "all", "-stand", "f95"]
+        case "lf95":
+            cmd = ["wine", "lf95", "-nc", "-chkglobal", "-f95", "-W"]
         case _:
             print("Invalid static checker: {}".format(static_checker))
             exit(1)
