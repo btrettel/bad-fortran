@@ -3,7 +3,7 @@ C     Modified from:
 C     https://www.fortran.uk/diagnose.zip case arg7.f90
 C     Also see:
 C     chkdiagnostics chk_array_scalar_arg.f90
-      PROGRAM ARG07
+      PROGRAM ARG08
       REAL SAME
       EXTERNAL SAME
       PRINT *, SAME(10.0)
